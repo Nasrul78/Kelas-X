@@ -8,7 +8,7 @@
 }
 
 li:hover {
-    background-color: red;
+    background-color: lightgray;
 }
 
 p::first-letter {
@@ -16,20 +16,28 @@ p::first-letter {
     font-size: xx-large;
 }
 
-a:link {
-    color: red;
-}
-
-a:visited {
-    color: blue;
-}
-
-a:hover {
+h2:hover {
     color: green;
 }
 
+.card:target {
+    background-color: yellow;
+}
+
+a:link {
+    color: blue;
+}
+
+a:visited {
+    color: lightblue;
+}
+
+a:hover {
+    color: darkblue;
+}
+
 a:active {
-    color: yellow;
+    color: purple;
 }
 
 .display {
