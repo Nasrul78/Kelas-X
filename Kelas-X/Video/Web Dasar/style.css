@@ -1,0 +1,17 @@
+.border {
+    border: 1px solid;
+}
+
+img {
+    width: 100px;
+}
+
+.card {
+    width: 200px;
+}
+
+.horizontal {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
