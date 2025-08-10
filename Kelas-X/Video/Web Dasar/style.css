@@ -45,6 +45,29 @@ a:active {
     padding: 1%;
 }
 
+.display:hover {
+    animation-name: animasi;
+    animation-duration: 5s;
+}
+
+@keyframes animasi {
+    0% {
+        background-color: red;
+    }
+
+    25% {
+        background-color: yellow;
+    }
+
+    50% {
+        background-color: blue;
+    }
+
+    100% {
+        background-color: green;
+    }
+}
+
 .warna {
     background-image: linear-gradient(to bottom right, red, yellow);
     color: white;
