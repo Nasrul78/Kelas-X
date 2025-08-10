@@ -18,6 +18,8 @@ img {
 
 .card {
     width: 30%;
+    padding: 5%;
+    box-sizing: border-box;
 }
 
 .horizontal {
