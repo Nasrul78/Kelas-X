@@ -7,3 +7,40 @@ th,
 td {
     border: 1px solid black;
 }
+
+div {
+    border: 2px solid red;
+    margin: 100px 0px 0px 50px;
+    /* margin-left: 200px; */
+    padding-top: 20px;
+}
+
+nav {
+    border: 3px solid black;
+}
+
+img {
+    width: 200px;
+}
+
+/* nav {
+    margin-left: 200px;
+} */
+
+.batas {
+    margin-left: 200px;
+}
+
+.warna {
+    background-color: yellow;
+}
+
+#background {
+    background-color: red;
+    position: sticky;
+    top: 200px;
+}
+
+#kiri {
+    margin-left: 200px;
+}
