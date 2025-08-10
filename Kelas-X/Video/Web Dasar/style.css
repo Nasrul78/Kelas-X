@@ -7,9 +7,34 @@
     margin: auto;
 }
 
+li:hover {
+    background-color: red;
+}
+
+p::first-letter {
+    color: red;
+    font-size: xx-large;
+}
+
+a:link {
+    color: red;
+}
+
+a:visited {
+    color: blue;
+}
+
+a:hover {
+    color: green;
+}
+
+a:active {
+    color: yellow;
+}
+
 .display {
     display: inline-block;
-    padding: 3%;
+    padding: 1%;
 }
 
 .warna {
