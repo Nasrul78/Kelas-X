@@ -70,3 +70,23 @@ img {
 .rata {
     text-align: center;
 }
+
+@media only screen and (max-width: 500px) {
+    * {
+        margin: 0%;
+        padding: 0%;
+    }
+
+    .tempat {
+        width: 80%;
+    }
+
+    .lebar {
+        width: 100%;
+    }
+
+    .respon {
+        display: flex;
+        flex-direction: column;
+    }
+}
