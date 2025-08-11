@@ -18,6 +18,10 @@
     background-color: green;
 }
 
+img {
+    width: 100px;
+}
+
 body::after {
     content: "XS";
     position: fixed;
