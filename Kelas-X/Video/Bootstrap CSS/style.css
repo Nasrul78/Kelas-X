@@ -2,6 +2,12 @@
     width: 30%;
 }
 
+.carousel-item img {
+    height: 50vh;
+    object-fit: cover;
+    object-position: center;
+}
+
 body::after {
     content: "XS";
     position: fixed;
