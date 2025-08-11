@@ -1,32 +1,8 @@
-.lima {
-    height: 50px;
-}
-
-.seratus {
-    height: 100px;
-}
-
-.merah {
-    background-color: red;
-}
-
-.kuning {
-    background-color: yellow;
-}
-
-.hijau {
-    background-color: green;
-}
-
-img {
-    width: 100px;
-}
-
 body::after {
     content: "XS";
     position: fixed;
-    right: 0;
-    top: 0;
+    right: 0px;
+    top: 0px;
 }
 
 @media (min-width: 576px) {
