@@ -11,7 +11,37 @@
 </head>
 
 <body>
-    <h1>Bootstrap CSS</h1>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <div class="d-flex">
+                <a href="#">
+                    <img class="lebar" src="images/slogan.png" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button"
+                            data-bs-toggle="dropdown">Pemrograman</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Javascript</a></li>
+                            <li><a class="dropdown-item" href="#">PHP</a></li>
+                            <li><a class="dropdown-item" href="#">MySQL</a></li>
+                            <li><a class="dropdown-item" href="#">HTML - CSS</a></li>
+                            <li><a class="dropdown-item" href="#">Laravel</a></li>
+                            <li><a class="dropdown-item" href="#">React JS</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 </body>
 
 </html>

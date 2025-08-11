@@ -1,3 +1,7 @@
+.lebar {
+    width: 30%;
+}
+
 body::after {
     content: "XS";
     position: fixed;
