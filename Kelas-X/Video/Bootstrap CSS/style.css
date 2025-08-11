@@ -2,6 +2,12 @@
     width: 30%;
 }
 
+.kotak {
+    background-color: red;
+    height: 10vh;
+    color: white;
+}
+
 .carousel-item img {
     height: 50vh;
     object-fit: cover;
