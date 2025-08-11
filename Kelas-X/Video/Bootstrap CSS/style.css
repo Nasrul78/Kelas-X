@@ -8,6 +8,12 @@
     color: white;
 }
 
+.card img {
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: center;
+}
+
 .carousel-item img {
     height: 50vh;
     object-fit: cover;
