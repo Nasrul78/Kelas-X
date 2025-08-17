@@ -30,19 +30,27 @@ function tampil() {
 // })
 
 btn.onclick = function () {
+    const nama = document.querySelector("#nama");
+
+    if (nama.value == "a") {
+        alert("Nama sama!");
+    } else {
+        alert(nama.value);
+    }
+
     // let menu = document.querySelector("ul");
     // menu.removeChild(menu.children[0]);
 
-    let a = 5;
-    let b = 6;
+    // let a = 5;
+    // let b = 6;
 
-    b = b + a;
-    b = b - a;
-    b = b * a;
-    b = b / a;
-    b = b ** a;
+    // b = b + a;
+    // b = b - a;
+    // b = b * a;
+    // b = b / a;
+    // b = b ** a;
 
-    console.log(b);
+    // console.log(b);
 
     // const nama = document.querySelector("#nama");
     // const judul = document.querySelector("h1");
