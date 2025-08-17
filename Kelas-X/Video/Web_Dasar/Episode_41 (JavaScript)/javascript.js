@@ -30,6 +30,16 @@ function tampil() {
 // })
 
 btn.onclick = function () {
-    let menu = document.querySelector("ul");
-    menu.removeChild(menu.children[0]);
+    // let menu = document.querySelector("ul");
+    // menu.removeChild(menu.children[0]);
+
+    const nama = document.querySelector("#nama");
+    const judul = document.querySelector("h1");
+
+    let tampil = "Belajar";
+
+    judul.innerHTML = tampil + nama.value;
+
+    tampil = "Javascript";
+    judul.innerHTML = tampil + nama.value;
 }
