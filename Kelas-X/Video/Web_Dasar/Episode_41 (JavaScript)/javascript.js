@@ -1,3 +1,3 @@
 function tampil() {
-    alert("Javascript!")
+    document.querySelector("#aku").innerHTML = "Javascript";
 }
