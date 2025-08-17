@@ -1,1 +1,3 @@
-alert("Javascript!")
+function tampil() {
+    alert("Javascript!")
+}
