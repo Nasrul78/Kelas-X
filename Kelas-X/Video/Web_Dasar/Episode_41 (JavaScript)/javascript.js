@@ -5,10 +5,14 @@ function tampil() {
 
     // console.log(document.querySelectorAll("img"));
 
-    min = Math.ceil(0);
-    max = Math.floor(2);
-    let n = Math.floor(Math.random() * (max - min + 1) + min);
-    console.log(n);
+    // min = Math.ceil(0);
+    // max = Math.floor(2);
+    // let n = Math.floor(Math.random() * (max - min + 1) + min);
+    // console.log(n);
 
-    document.querySelectorAll("img")[n].style.visibility = "visible";
+    // document.querySelectorAll("img")[n].style.visibility = "visible";
+
+    document.querySelector("#hasil").value = document.querySelector("#nama").value;
+
+    document.querySelector("#para").innerHTML = document.querySelector("#nama").value;
 }
