@@ -25,6 +25,11 @@ function tampil() {
 
 // btn.addEventListener("mouseover", tampil);
 
-btn.addEventListener("mouseover", function () {
-    alert("Event");
-})
+// btn.addEventListener("mouseover", function() {
+//     alert("Event");
+// })
+
+btn.onclick = function () {
+    let menu = document.querySelector("ul");
+    menu.removeChild(menu.children[0]);
+}
