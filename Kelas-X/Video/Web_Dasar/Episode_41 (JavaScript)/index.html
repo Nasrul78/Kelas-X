@@ -7,14 +7,27 @@
     <title>JavaScript</title>
 
     <script src="javascript.js" defer></script>
+    <style>
+        img {
+            width: 400px;
+            visibility: hidden;
+            position: absolute;
+        }
+    </style>
 </head>
 
 <body>
-    <button onclick="tampil()">Klik Aku!</button>
+    <button onclick="tampil()">Mainkan!</button>
 
     <div class="container">
-        <h1>Javascript</h1>
-        <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, consectetur!</p>
+        <h1>Permainan Batu, Gunting, Kertas</h1>
+        <p id="para">Klik mainkan untuk memulai permainan!</p>
+    </div>
+
+    <div>
+        <img src="images/batu.jpeg" alt="">
+        <img src="images/gunting.jpg" alt="">
+        <img src="images/kertas.jpg" alt="">
     </div>
 </body>
 
