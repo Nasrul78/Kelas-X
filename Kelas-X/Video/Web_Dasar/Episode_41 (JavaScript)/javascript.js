@@ -16,3 +16,15 @@ function tampil() {
 
     document.querySelector("#para").innerHTML = document.querySelector("#nama").value;
 }
+
+// btn.onclick = tampil;
+
+// btn.onmouseover = function () {
+//     alert("Javascript");
+// }
+
+// btn.addEventListener("mouseover", tampil);
+
+btn.addEventListener("mouseover", function () {
+    alert("Event");
+})
