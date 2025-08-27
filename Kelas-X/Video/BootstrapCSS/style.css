@@ -1,19 +1,12 @@
-.lima {
-    height: 50px;
+.carousel-item img {
+    height: 180px;
+    object-fit: cover;
 }
 
-.seratus {
-    height: 100px;
-}
-
-.merah {
-    background: red;
-}
-
-.kuning {
-    background: yellow;
-}
-
-.hijau {
-    background: green;
+@media (min-width: 560px) {
+    .carousel-item img {
+        height: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
