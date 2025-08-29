@@ -10,3 +10,12 @@
         margin-right: auto;
     }
 }
+
+.jumbotron {
+    padding: 0.5rem;
+}
+
+.jumbotron .container-fluid h1 {
+    font-size: 3em;
+    font-weight: bold;
+}
