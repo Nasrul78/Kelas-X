@@ -19,3 +19,12 @@
     font-size: 3em;
     font-weight: bold;
 }
+
+.card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card {
+    width: 18rem;
+}
