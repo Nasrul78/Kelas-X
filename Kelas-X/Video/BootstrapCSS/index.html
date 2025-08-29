@@ -11,7 +11,7 @@
 
 <body>
     <!-- Navigasi -->
-    <nav class="navbar navbar-expand-sm bg-body-tertiary" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-sm bg-body-tertiary sticky-top" data-bs-theme="dark">
         <div class="container">
             <a class="navbar-brand" href="#">
                 <img src="images/logo.png" alt="Bootstrap" width="180">
@@ -26,7 +26,7 @@
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Produk</a>
+                        <a class="nav-link" href="#produk">Produk</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Promo</a>
@@ -111,7 +111,7 @@
 
     <!-- Card -->
     <div class="container">
-        <div class="row">
+        <div class="row" id="produk">
             <div class="col-lg-4 d-flex justify-content-center">
                 <div class="card border-0">
                     <img src="images/laptop.png" class="card-img-top" alt="...">
@@ -163,12 +163,44 @@
                 </div>
 
                 <div class="modal-body">
-                    <h5>Isi form kontak di sini</h5>
+                    <form>
+                        <div class="row">
+                            <div class="col">
+                                <div class="mb-3">
+                                    <label for="exampleInputText1" class="form-label">Nama</label>
+                                    <input type="text" class="form-control" id="exampleInputText1"
+                                        aria-describedby="TextHelp">
+                                    <div id="TextHelp" class="form-text">Isi nama dan alamat anda!
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <div class="mb-3">
+                                    <label for="exampleInputAlamat1" class="form-label">Alamat</label>
+                                    <input type="text" class="form-control" id="exampleInputAlamat1">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="exampleInputKota1" class="form-label">Kota</label>
+                                    <input type="text" class="form-control" id="exampleInputKota1">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="mb-3">
+                                    <label for="exampleInputKodePos1" class="form-label">KodePos</label>
+                                    <input type="text" class="form-control" id="exampleInputKodePos1">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
                 </div>
 
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save changes</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Kirim</button>
                 </div>
             </div>
         </div>
