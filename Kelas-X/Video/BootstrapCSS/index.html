@@ -29,10 +29,13 @@
                         <a class="nav-link" href="#produk">Produk</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Promo</a>
+                        <a class="nav-link" href="#promo">Promo</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Kontak</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tentang">Tentang</a>
                     </li>
                 </ul>
             </div>
@@ -153,63 +156,138 @@
         </div>
     </div>
 
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Form Kontak</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
+    <!-- Kolom dan Tabel -->
+    <div class="container" id="promo">
+        <div class="row text-center bg-info text-white">
+            <div class="col">
+                <h1>Diskon 80%!</h1>
+            </div>
+        </div>
 
-                <div class="modal-body">
-                    <form>
-                        <div class="row">
-                            <div class="col">
-                                <div class="mb-3">
-                                    <label for="exampleInputText1" class="form-label">Nama</label>
-                                    <input type="text" class="form-control" id="exampleInputText1"
-                                        aria-describedby="TextHelp">
-                                    <div id="TextHelp" class="form-text">Isi nama dan alamat anda!
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col">
-                                <div class="mb-3">
-                                    <label for="exampleInputAlamat1" class="form-label">Alamat</label>
-                                    <input type="text" class="form-control" id="exampleInputAlamat1">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="mb-3">
-                                    <label for="exampleInputKota1" class="form-label">Kota</label>
-                                    <input type="text" class="form-control" id="exampleInputKota1">
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="mb-3">
-                                    <label for="exampleInputKodePos1" class="form-label">KodePos</label>
-                                    <input type="text" class="form-control" id="exampleInputKodePos1">
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Kirim</button>
-                </div>
+        <div class="row mt-3">
+            <div class="col-lg-4">
+                <img src="images/laptop.png" width="350px">
+            </div>
+            <div class="col-lg-8">
+                <table class="table mt-3 table-borderless">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Laptop</th>
+                            <th scope="col">Diskon</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Thinkpad</td>
+                            <td>80%</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>LOQ</td>
+                            <td>66%</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>ROG</td>
+                            <td>54%</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="bootstrap-5.3.7-dist/js/bootstrap.min.js"></script>
+    <div class="p-5 mb-4 bg-light rounded-3 bg-black text-white" id="tentang">
+        <div class="container-fluid py-5">
+            <div class="row">
+                <div class="col-lg-4">
+                    <p>SMKN 2 Buduran Sidoarjo<br>
+                        <strong>Sidoarjo, Jawa Timur</strong><br>
+                        Indonesia<br>
+                        61555
+                    </p>
+                </div>
+                <div class="col-lg-4">
+                    <p>
+                        <strong>Pembayaran</strong><br>
+                        BRI<br>1234-567-890<br>
+                        BCA<br>0987-654-321<br>
+                        Mandiri<br>0812-3456-7890<br>
+                    </p>
+                </div>
+                <div class="col-lg-4">
+                    <p>
+                        <strong>Tentang Kami</strong><br>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam nulla ipsum, itaque optio,
+                        dicta, consequuntur sed perspiciatis dolorem beatae possimus incidunt. Blanditiis repudiandae
+                        tenetur ab officia impedit officiis, aliquam vero consectetur, magni error optio hic voluptate
+                        suscipit voluptatibus ea. Corrupti deleniti officia optio natus omnis nisi placeat laudantium
+                        vitae molestias?
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Form Kontak</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-body">
+                        <form>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="mb-3">
+                                        <label for="exampleInputText1" class="form-label">Nama</label>
+                                        <input type="text" class="form-control" id="exampleInputText1"
+                                            aria-describedby="TextHelp">
+                                        <div id="TextHelp" class="form-text">Isi nama dan alamat anda!
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col">
+                                    <div class="mb-3">
+                                        <label for="exampleInputAlamat1" class="form-label">Alamat</label>
+                                        <input type="text" class="form-control" id="exampleInputAlamat1">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="exampleInputKota1" class="form-label">Kota</label>
+                                        <input type="text" class="form-control" id="exampleInputKota1">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="mb-3">
+                                        <label for="exampleInputKodePos1" class="form-label">KodePos</label>
+                                        <input type="text" class="form-control" id="exampleInputKodePos1">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Kirim</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"></script>
+        <script src="bootstrap-5.3.7-dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>
