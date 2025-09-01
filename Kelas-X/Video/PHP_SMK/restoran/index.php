@@ -48,7 +48,15 @@
             </div>
             <div class="col-md-9">
                 <?php 
-                    echo "<h1>Daftar Menu</h1>";
+                    if (isset($_GET["f"]) && isset($_GET["m"])) {
+                        $f = $_GET["f"];
+                        $m = $_GET["m"];
+
+                        $file = $f."/".$m.".php";
+                        require_once $file;
+                    } else {
+                        require_once "home/produk.php";
+                    }
                 ?>
             </div>
         </div>

@@ -1,0 +1,47 @@
+<h3>Menu</h3>
+
+<div class="mt-4 mb-4">
+    <?php 
+        $row = $db->getALL("SELECT * FROM tblkategori ORDER BY kategori asc");
+    ?>
+</div>
+
+<?php
+    $jumlahData = $db->rowCOUNT("SELECT idmenu FROM tblmenu");
+    $banyak = 3;
+    $halaman = ceil($jumlahData / $banyak);
+
+    if ( isset($_GET["p"]) ) {
+        $p = $_GET["p"];
+        $mulai = ($p - 1) * $banyak;
+    } else {
+        $mulai = 0;
+    }
+
+    $sql = "SELECT * FROM tblmenu ORDER BY menu ASC LIMIT $mulai, $banyak";
+    $row = $db->getALL($sql);
+
+    $no = 1 + $mulai;
+?>
+
+<?php if (!empty($row)) { ?>
+    <?php foreach ($row as $r): ?>
+        <div class="card" style="width: 15rem; float: left; margin: 10px;">
+            <img style="height: 238px;" src="upload/<?php echo $r["gambar"] ?>" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"><?php echo $r["menu"] ?></h5>
+                <p class="card-text"><?php echo $r["harga"] ?></p>
+                <a href="?f=kategori&m=insert" class="btn btn-primary" type="button">Beli</a>
+            </div>
+        </div>
+    <?php endforeach ?>
+<?php } ?>
+
+<div style="clear: both;">
+    <?php
+        for ($i=1; $i <= $halaman; $i++) { 
+            echo '<a href="?f=home&m=produk&p='.$i.'">'.$i.'</a>';
+            echo "&nbsp &nbsp &nbsp";
+        }
+    ?>
+</div>
