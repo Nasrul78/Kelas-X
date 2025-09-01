@@ -23,10 +23,20 @@
                 <h2><a href="index.php">Restoran SMKN 2</a></h2>
             </div>
             <div class="col-md-9">
-                <div class="float-end mt-4">Logout</div>
-                <div class="float-end mt-4 me-4">Login</div>
-                <div class="float-end mt-4 me-4">Pelanggan</div>
-                <div class="float-end mt-4 me-4">Daftar</div>
+                <?php 
+                    if (isset($_SESSION["pelanggan"])) {
+                        echo '
+                            <div class="float-end mt-4">Logout</div>
+                            <div class="float-end mt-4 me-4">Pelanggan</div>
+                        ';
+                    } else {
+                        echo '
+                            <div class="float-end mt-4 me-4">Login</div>
+                            <div class="float-end mt-4 me-4"><a href="?f=home&m=daftar">Daftar</a></div>
+                        ';
+                    }
+                ?>
+
             </div>
         </div>
 
