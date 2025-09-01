@@ -14,6 +14,11 @@
         } else {
             insertOrderDetail($idOrder);
         }
+
+        kosongkanSession();
+        header("location:?f=home&m=checkout");
+    } else {
+        info();
     }
 
     function idOrder() {
@@ -52,11 +57,20 @@
                     $sql = "INSERT INTO tblorderdetail VALUES ('', $idOrder, $idmenu, $value, $harga)";
                     $db->runSQL($sql);
                 }
-
-                echo "<pre>";
-                print_r($row);
-                echo "</pre>";
             }
         }
+    }
+
+    function kosongkanSession() {
+        foreach ($_SESSION as $key => $value) {
+            if ($key<>'pelanggan' && $key<>'idpelanggan') {
+                $id = substr($key, 1);
+                unset($_SESSION["_".$id]);
+            }
+        }
+    }
+
+    function info() {
+        echo "<h3>Terima Kasih Sudah Berbelanja!</h3>";
     }
 ?>

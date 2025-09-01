@@ -88,4 +88,12 @@
     }
 ?>
 
+<?php 
+    if (!empty($total)) {
+?>
+
 <a href="?f=home&m=checkout&total=<?php echo $total ?>" class="btn btn-primary" type="button">Checkout</a>
+
+<?php 
+    }
+?>
