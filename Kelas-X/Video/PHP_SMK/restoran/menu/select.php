@@ -33,7 +33,7 @@
 
 <?php
     $jumlahData = $db->rowCOUNT("SELECT idmenu FROM tblmenu $where");
-    $banyak = 4;
+    $banyak = 3;
     $halaman = ceil($jumlahData / $banyak);
 
     if ( isset($_GET["p"]) ) {
@@ -49,11 +49,13 @@
     $no = 1 + $mulai;
 ?>
 
-<table class="table table-bordered w-50">
+<table class="table table-bordered w-60">
     <thead>
         <tr>
             <th>No</th>
-            <th>menu</th>
+            <th>Menu</th>
+            <th>Harga</th>
+            <th>Gambar</th>
             <th>Delete</th>
             <th>Update</th>
         </tr>
@@ -64,6 +66,8 @@
             <tr>
                 <td><?php echo $no++ ?></td>
                 <td><?php echo $r["menu"] ?></td>
+                <td><?php echo $r["harga"] ?></td>
+                <td><img style="width: 100px; aspect-ratio: 1/1; object-fit: cover;" src="../upload/<?php echo $r["gambar"] ?>"></td>
                 <td><a href="?f=menu&m=delete&id=<?php echo $r["idmenu"] ?>">Delete</a></td>
                 <td><a href="?f=menu&m=update&id=<?php echo $r["idmenu"] ?>">Update</a></td>
             </tr>
