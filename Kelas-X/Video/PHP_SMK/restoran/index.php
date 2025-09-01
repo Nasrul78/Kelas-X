@@ -20,7 +20,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-3">
-                <h2>Restoran SMKN 2</h2>
+                <h2><a href="index.php">Restoran SMKN 2</a></h2>
             </div>
             <div class="col-md-9">
                 <div class="float-end mt-4">Logout</div>
@@ -38,7 +38,7 @@
                 <ul class="nav flex-column">
                     <?php foreach ($row as $r): ?>
                     <li class="nav-item">
-                        <a href="?f=kategori&m=select" class="nav-link">
+                        <a href="?f=home&m=produk&id=<?php echo $r["idkategori"] ?>" class="nav-link">
                             <?php echo $r["kategori"] ?>
                         </a>
                     </li>
