@@ -46,7 +46,7 @@
         global $db;
 
         foreach ($_SESSION as $key => $value) {
-            if ($key<>'pelanggan' && $key<>'idpelanggan') {
+            if ($key<>'pelanggan' && $key<>'idpelanggan' && $key<>'user' && $key<>'level' && $key<>'iduser') {
                 $id = substr($key, 1);
                 $sql = "SELECT * FROM tblmenu WHERE idmenu = $id";
                 $row = $db->getALL($sql);
