@@ -2,11 +2,11 @@
 
 <div class="mb-3">
     <form action="" method="post">
-        <div class="mb-3 w-50">
+        <div class="mb-3 w-50 float-start">
             <label for="" class="form-label">Tanggal Awal:</label>
             <input type="date" name="tawal" required class="form-control">
         </div>
-        <div class="mb-3 w-50">
+        <div class="mb-3 w-50 float-start">
             <label for="" class="form-label">Tanggal Akhir:</label>
             <input type="date" name="takhir" required class="form-control">
         </div>
