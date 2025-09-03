@@ -12,7 +12,7 @@
         <div class="mt-2">
             <nav class="navbar navbar-expand-lg bg-body-tertiary">
                 <div class="container-fluid">
-                    <a href="#"><img style="width: 200px;" src="{{ asset('gambar/logo.png') }}" alt=""></a>
+                    <a href="/"><img style="width: 200px;" src="{{ asset('gambar/logo.png') }}" alt=""></a>
                     <ul class="navbar-nav gap-5">
                         <li class="nav-item">Cart</li>
                         <li class="nav-item">Register</li>
@@ -31,7 +31,7 @@
                     @endforeach
                 </ul>
             </div>
-            <div class="col-8">
+            <div class="col-10">
                 @yield('content')
             </div>
         </div>
