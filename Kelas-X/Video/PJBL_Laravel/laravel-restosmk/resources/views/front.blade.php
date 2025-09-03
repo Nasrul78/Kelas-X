@@ -23,7 +23,7 @@
                 </div>
             </nav>
         </div>
-        <div class="row">
+        <div class="row mt-4">
             <div class="col-2">
                 <ul class="list-group">
                     @foreach ($kategoris as $kategori)
@@ -31,8 +31,8 @@
                     @endforeach
                 </ul>
             </div>
-            <div>
-                Content
+            <div class="col-8">
+                @yield('content')
             </div>
         </div>
         <div>

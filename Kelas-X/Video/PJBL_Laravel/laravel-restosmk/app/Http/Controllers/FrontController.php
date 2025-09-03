@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Menu;
 use App\Models\Kategori;
 use Illuminate\Http\Request;
 
@@ -15,8 +16,12 @@ class FrontController extends Controller
     public function index()
     {
         $kategoris = Kategori::all();
+        $menus = Menu::all();
 
-        return view('front', ['kategoris' => $kategoris]);
+        return view('menu', [
+            'kategoris' => $kategoris,
+            'menus' => $menus,
+        ]);
     }
 
     /**
