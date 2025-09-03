@@ -23,9 +23,13 @@
                 </div>
             </nav>
         </div>
-        <div>
-            <div>
-                Kategori
+        <div class="row">
+            <div class="col-2">
+                <ul class="list-group">
+                    @foreach ($kategoris as $kategori)
+                        <li class="list-group-item">{{ $kategori -> kategori }}</li>
+                    @endforeach
+                </ul>
             </div>
             <div>
                 Content
