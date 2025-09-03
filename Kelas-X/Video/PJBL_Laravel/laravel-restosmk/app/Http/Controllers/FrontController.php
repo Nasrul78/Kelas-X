@@ -53,7 +53,13 @@ class FrontController extends Controller
      */
     public function show($id)
     {
-        //
+        $kategoris = Kategori::all();
+        $menus = Menu::where('idkategori', $id)->paginate(3);
+
+        return view('kategori', [
+            'kategoris' => $kategoris,
+            'menus' => $menus,
+        ]);
     }
 
     /**

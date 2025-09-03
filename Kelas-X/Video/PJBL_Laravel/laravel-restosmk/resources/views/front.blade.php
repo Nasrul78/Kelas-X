@@ -27,7 +27,9 @@
             <div class="col-2">
                 <ul class="list-group">
                     @foreach ($kategoris as $kategori)
-                        <li class="list-group-item">{{ $kategori -> kategori }}</li>
+                        <li class="list-group-item">
+                            <a href="{{ url('show/'.$kategori->idkategori) }}">{{ $kategori -> kategori }}</a>
+                        </li>
                     @endforeach
                 </ul>
             </div>
