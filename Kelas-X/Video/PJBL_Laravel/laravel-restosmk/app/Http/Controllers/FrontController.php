@@ -42,7 +42,14 @@ class FrontController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->validate([
+            'pelanggan' => 'required',
+            'alamat' => 'required',
+            'telp' => 'required',
+            'jeniskelamin' => 'required',
+            'email' => 'required | email | unique:pelanggans',
+            'password' => 'required | min:3',
+        ]);
     }
 
     /**
