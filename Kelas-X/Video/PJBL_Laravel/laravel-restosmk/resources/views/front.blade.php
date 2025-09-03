@@ -15,7 +15,7 @@
                     <a href="/"><img style="width: 200px;" src="{{ asset('gambar/logo.png') }}" alt=""></a>
                     <ul class="navbar-nav gap-5">
                         <li class="nav-item">Cart</li>
-                        <li class="nav-item">Register</li>
+                        <li class="nav-item"><a href="{{ url('register') }}">Register</a></li>
                         <li class="nav-item">Email</li>
                         <li class="nav-item">Login</li>
                         <li class="nav-item">Logout</li>
