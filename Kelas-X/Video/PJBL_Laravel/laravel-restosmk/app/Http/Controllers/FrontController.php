@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Menu;
 use App\Models\Kategori;
+use App\Models\Pelanggan;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class FrontController extends Controller
 {
@@ -50,6 +52,17 @@ class FrontController extends Controller
             'email' => 'required | email | unique:pelanggans',
             'password' => 'required | min:3',
         ]);
+
+        Pelanggan::create([
+            'pelanggan' => $data['pelanggan'],
+            'alamat' => $data['alamat'],
+            'telp' => $data['telp'],
+            'jeniskelamin' => $data['jeniskelamin'],
+            'email' => $data['email'],
+            'password' => Hash::make($data['password']),
+        ]);
+
+        return redirect('/');
     }
 
     /**
