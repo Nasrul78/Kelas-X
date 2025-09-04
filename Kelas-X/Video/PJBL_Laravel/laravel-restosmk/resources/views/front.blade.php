@@ -17,7 +17,7 @@
                         <li class="nav-item">Cart</li>
                         <li class="nav-item"><a href="{{ url('register') }}">Register</a></li>
                         <li class="nav-item">Email</li>
-                        <li class="nav-item">Login</li>
+                        <li class="nav-item"><a href="{{ url('login') }}">Login</a></li>
                         <li class="nav-item">Logout</li>
                     </ul>
                 </div>

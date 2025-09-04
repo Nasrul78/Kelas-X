@@ -122,4 +122,11 @@ class FrontController extends Controller
 
         return view('register', ['kategoris' => $kategoris]);
     }
+
+    public function login()
+    {
+        $kategoris = Kategori::all();
+
+        return view('login', ['kategoris' => $kategoris]);
+    }
 }

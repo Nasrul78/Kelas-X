@@ -1,0 +1,29 @@
+@extends('front')
+
+@section('content')
+    <div class="row">
+        <div class="col-6">
+            <form action="{{ url('/postlogin') }}" method="post">
+                @csrf
+
+                <div class="mt-2">
+                    <label class="form-label" for="Email">Email</label>
+                    <input class="form-control" value="{{ old('email') }}" type="email" name="email">
+                    <span class="text-danger">
+                        @error('email'){{ $message }}@enderror
+                    </span>
+                </div>
+                <div class="mt-2">
+                    <label class="form-label" for="">Password</label>
+                    <input class="form-control" type="password" name="password">
+                    <span class="text-danger">
+                        @error('password'){{ $message }}@enderror
+                    </span>
+                </div>
+                <div class="mt-4">
+                    <button class="btn btn-primary" type="submit">login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+@endsection
