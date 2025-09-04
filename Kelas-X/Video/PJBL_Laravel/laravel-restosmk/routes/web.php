@@ -30,3 +30,7 @@ Route::post('postregister', [FrontController::class, 'store']);
 Route::post('postlogin', [FrontController::class, 'postLogin']);
 
 Route::get('beli/{id}', [CartController::class, 'beli']);
+Route::get('hapus/{id}', [CartController::class, 'hapus']);
+
+Route::get('cart', [CartController::class, 'cart']);
+Route::get('batal', [CartController::class, 'batal']);

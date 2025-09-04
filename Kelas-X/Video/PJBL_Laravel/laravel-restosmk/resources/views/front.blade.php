@@ -15,12 +15,12 @@
                     <a href="/"><img style="width: 200px;" src="{{ asset('gambar/logo.png') }}" alt=""></a>
                     <ul class="navbar-nav gap-5">
                         @if (session()->has('cart'))
-                            <li class="nav-item">Cart: 
+                            <li class="nav-item"><a href="{{ url('cart') }}">Cart ( 
                                 @php
                                     $count = count(session('cart'));
                                     echo $count;
                                 @endphp
-                            </li>
+                            )</a></li>
                         @endif
 
                         @if (session()->missing('idpelanggan'))

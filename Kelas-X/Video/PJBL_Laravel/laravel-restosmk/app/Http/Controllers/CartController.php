@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Kategori;
 use App\Models\Menu;
 use Illuminate\Http\Request;
 
@@ -24,5 +25,32 @@ class CartController extends Controller
         }
 
         session()->put('cart', $cart);
+
+        return redirect('cart');
+    }
+
+    public function cart()
+    {
+        $kategoris = Kategori::all();
+
+        return view('cart', ['kategoris' => $kategoris]);
+    }
+
+    public function hapus($idmenu)
+    {
+        $cart = session()->get('cart');
+        if (isset($cart[$idmenu])) {
+            unset($cart[$idmenu]);
+            session()->put('cart', $cart);
+        }
+
+        return redirect('cart');
+    }
+
+    public function batal()
+    {
+        session()->forget('cart');
+
+        return redirect('/');
     }
 }
