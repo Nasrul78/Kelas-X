@@ -6,6 +6,12 @@
             <form action="{{ url('/postlogin') }}" method="post">
                 @csrf
 
+                @if (Session::has('pesan'))
+                    <div class="alert alert-danger">
+                        {{ Session::get('pesan') }}
+                    </div>
+                @endif
+
                 <div class="mt-2">
                     <label class="form-label" for="Email">Email</label>
                     <input class="form-control" value="{{ old('email') }}" type="email" name="email">

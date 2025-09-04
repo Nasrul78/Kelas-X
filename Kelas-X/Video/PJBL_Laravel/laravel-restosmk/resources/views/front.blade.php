@@ -16,7 +16,11 @@
                     <ul class="navbar-nav gap-5">
                         <li class="nav-item">Cart</li>
                         <li class="nav-item"><a href="{{ url('register') }}">Register</a></li>
-                        <li class="nav-item">Email</li>
+                        <li class="nav-item">
+                            @if (session()->has('idpelanggan'))
+                                {{ session('idpelanggan')['email'] }}
+                            @endif
+                        </li>
                         <li class="nav-item"><a href="{{ url('login') }}">Login</a></li>
                         <li class="nav-item">Logout</li>
                     </ul>

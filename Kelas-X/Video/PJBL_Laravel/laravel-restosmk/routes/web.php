@@ -24,3 +24,4 @@ Route::get('register', [FrontController::class, 'register']);
 Route::get('login', [FrontController::class, 'login']);
 
 Route::post('postregister', [FrontController::class, 'store']);
+Route::post('postlogin', [FrontController::class, 'postLogin']);

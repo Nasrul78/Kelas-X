@@ -129,4 +129,30 @@ class FrontController extends Controller
 
         return view('login', ['kategoris' => $kategoris]);
     }
+
+    public function postLogin(Request $request)
+    {
+        $data = $request->validate([
+            'email' => 'required',
+            'password' => 'required | min:3',
+        ]);
+
+        $pelanggan = Pelanggan::where('email', $data)->first();
+
+        if ($pelanggan) {
+            if (Hash::check($data['password'], $pelanggan['password'])) {
+                $data = [
+                    'idpelanggan' => $pelanggan['idpelanggan'],
+                    'email' => $pelanggan['email'],
+                ];
+
+                $request->session()->put('idpelanggan', $data);
+                return redirect('/');
+            } else {
+                return back()->with('pesan', 'Password Salah!');
+            }
+        } else {
+            return back()->with('pesan', 'Email Belum Terdaftar!');
+        }
+    }
 }
