@@ -155,4 +155,11 @@ class FrontController extends Controller
             return back()->with('pesan', 'Email Belum Terdaftar!');
         }
     }
+
+    public function logout()
+    {
+        session()->flush();
+
+        return redirect('/');
+    }
 }
