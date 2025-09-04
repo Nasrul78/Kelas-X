@@ -53,4 +53,26 @@ class CartController extends Controller
 
         return redirect('/');
     }
+
+    public function tambah($idmenu)
+    {
+        $cart = session()->get('cart');
+        $cart[$idmenu]['jumlah']++;
+        session()->put('cart', $cart);
+
+        return redirect('cart');
+    }
+
+    public function kurang($idmenu)
+    {
+        $cart = session()->get('cart');
+        if ($cart[$idmenu]['jumlah'] > 1) {
+            $cart[$idmenu]['jumlah']--;
+        } else {
+            unset($cart[$idmenu]);
+        }
+        session()->put('cart', $cart);
+
+        return redirect('cart');
+    }
 }

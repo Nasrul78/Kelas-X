@@ -31,6 +31,8 @@ Route::post('postlogin', [FrontController::class, 'postLogin']);
 
 Route::get('beli/{id}', [CartController::class, 'beli']);
 Route::get('hapus/{id}', [CartController::class, 'hapus']);
+Route::get('tambah/{id}', [CartController::class, 'tambah']);
+Route::get('kurang/{id}', [CartController::class, 'kurang']);
 
 Route::get('cart', [CartController::class, 'cart']);
 Route::get('batal', [CartController::class, 'batal']);

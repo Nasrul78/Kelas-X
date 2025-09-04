@@ -50,8 +50,8 @@
                 @yield('content')
             </div>
         </div>
-        <div>
-            Footer
+        <div class="bg-light mt-5">
+            <p class="text-center">@nxsrul.0</p>
         </div>
     </div>
 
