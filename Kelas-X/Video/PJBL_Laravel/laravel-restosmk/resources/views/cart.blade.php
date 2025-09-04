@@ -50,6 +50,10 @@
                     </tr>
                 </tbody>
             </table>
+
+            <div>
+                <a class="btn btn-success" href="{{ url('checkout') }}">Checkout</a>
+            </div>
         </div>
     @else
         <script>

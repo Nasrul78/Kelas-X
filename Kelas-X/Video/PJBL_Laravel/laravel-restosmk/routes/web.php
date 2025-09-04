@@ -36,3 +36,4 @@ Route::get('kurang/{id}', [CartController::class, 'kurang']);
 
 Route::get('cart', [CartController::class, 'cart']);
 Route::get('batal', [CartController::class, 'batal']);
+Route::get('checkout', [CartController::class, 'checkout']);

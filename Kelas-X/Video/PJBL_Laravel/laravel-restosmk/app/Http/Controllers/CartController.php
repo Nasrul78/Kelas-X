@@ -4,12 +4,18 @@ namespace App\Http\Controllers;
 
 use App\Models\Kategori;
 use App\Models\Menu;
+use App\Models\Order;
+use App\Models\OrderDetail;
 use Illuminate\Http\Request;
 
 class CartController extends Controller
 {
     public function beli($idmenu)
     {
+        if (session()->missing('idpelanggan')) {
+            return redirect('login');
+        }
+
         $menu = Menu::where('idmenu', $idmenu)->first();
         $cart = session()->get('cart', []);
 
@@ -74,5 +80,36 @@ class CartController extends Controller
         session()->put('cart', $cart);
 
         return redirect('cart');
+    }
+
+    public function checkout()
+    {
+        $idorder = date('YmdHms');
+        $total = 0;
+
+        foreach (session('cart') as $key => $value) {
+            $data = [
+                'idorder' => $idorder,
+                'idmenu' => $value['idmenu'],
+                'jumlah' => $value['jumlah'],
+                'hargajual' => $value['harga'],
+            ];
+            $total += $value['jumlah'] * $value['harga'];
+
+            OrderDetail::create($data);
+        }
+
+        $tanggal = date('Y-m-d');
+        $data = [
+            'idorder' => $idorder,
+            'idpelanggan' => session('idpelanggan')['idpelanggan'],
+            'tglorder' => $tanggal,
+            'total' => $total,
+            'bayar' => 0,
+            'kembali' => 0,
+        ];
+        Order::create($data);
+
+        return redirect('logout');
     }
 }
