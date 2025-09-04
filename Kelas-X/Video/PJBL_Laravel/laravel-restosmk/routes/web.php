@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\FrontController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CartController;
+use App\Http\Controllers\FrontController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,3 +28,5 @@ Route::get('logout', [FrontController::class, 'logout']);
 
 Route::post('postregister', [FrontController::class, 'store']);
 Route::post('postlogin', [FrontController::class, 'postLogin']);
+
+Route::get('beli/{id}', [CartController::class, 'beli']);

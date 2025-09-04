@@ -14,7 +14,14 @@
                 <div class="container-fluid">
                     <a href="/"><img style="width: 200px;" src="{{ asset('gambar/logo.png') }}" alt=""></a>
                     <ul class="navbar-nav gap-5">
-                        <li class="nav-item">Cart</li>
+                        @if (session()->has('cart'))
+                            <li class="nav-item">Cart: 
+                                @php
+                                    $count = count(session('cart'));
+                                    echo $count;
+                                @endphp
+                            </li>
+                        @endif
 
                         @if (session()->missing('idpelanggan'))
                             <li class="nav-item"><a href="{{ url('register') }}">Register</a></li>
