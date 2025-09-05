@@ -7,6 +7,18 @@
     <div>
         <a href="{{ url('admin/menu/create') }}" class="btn btn-primary">Tambah Data</a>
     </div>
+    <div class="row mt-2">
+        <div class="col-4 mb-2">
+            <form action="{{ url('admin/select') }}" method="get">
+                <select class="form-select" name="idkategori" id="" onchange="this.form.submit()">
+                    <option value="">-- Pilih Kategori --</option>
+                    @foreach ($kategoris as $kategori)
+                        <option value="{{ $kategori->idkategori }}">{{ $kategori->kategori }}</option>
+                    @endforeach
+                </select>
+            </form>
+        </div>
+    </div>
     <div>
         <table class="table">
             <thead>
@@ -41,8 +53,7 @@
             </tbody>
         </table>
     </div>
-
     <div class="d-flex justify-content-center mt-2">
-        {{ $menus->links() }}
+        {{ $menus->withQueryString()->links() }}
     </div>
 @endsection
