@@ -15,7 +15,9 @@ class MenuController extends Controller
      */
     public function index()
     {
-        $menus = Menu::join('kategoris', 'menus.idkategori', '=', 'kategoris.idkategori')->get(['menus.*', 'kategoris.*']);
+        $menus = Menu::join('kategoris', 'menus.idkategori', '=', 'kategoris.idkategori')
+            ->select(['menus.*', 'kategoris.*'])
+            ->paginate(3);
 
         return view('backend.menu.select', ['menus' => $menus]);
     }
