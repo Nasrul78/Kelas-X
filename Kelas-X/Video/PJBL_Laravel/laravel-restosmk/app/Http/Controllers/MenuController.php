@@ -35,7 +35,7 @@ class MenuController extends Controller
      */
     public function create()
     {
-        //
+        return view('backend.menu.insert');
     }
 
     /**
@@ -44,9 +44,14 @@ class MenuController extends Controller
      * @param  \App\Http\Requests\StoreMenuRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreMenuRequest $request)
+    public function store(Request $request)
     {
-        //
+        $data = $request->validate([
+            'gambar' => 'required | max:2045'
+        ]);
+        $namaGambar = $request->file('gambar')->getClientOriginalName();
+
+        $request->gambar->move(public_path('gambar'), $namaGambar);
     }
 
     /**
