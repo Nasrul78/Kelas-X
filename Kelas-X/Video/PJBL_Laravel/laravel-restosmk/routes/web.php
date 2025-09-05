@@ -48,7 +48,14 @@ Route::post('admin/postlogin', [AuthController::class, 'postLogin']);
 Route::get('admin/logout', [AuthController::class, 'logout']);
 
 Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
-    Route::resource('kategori', KategoriController::class);
-    Route::resource('user', UserController::class);
-    Route::resource('order', OrderController::class);
+    Route::group(['middleware' => ['CekLogin:admin']], function () {
+        Route::resource('user', UserController::class);
+    });
+
+    Route::group(['middleware' => ['CekLogin:kasir']], function () {
+        Route::resource('order', OrderController::class);
+    });
+    Route::group(['middleware' => ['CekLogin:manager']], function () {
+        Route::resource('kategori', KategoriController::class);
+    });
 });
