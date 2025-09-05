@@ -15,7 +15,9 @@ class KategoriController extends Controller
      */
     public function index()
     {
-        return view('backend.kategori.select');
+        $kategoris = Kategori::all();
+
+        return view('backend.kategori.select', ['kategoris' => $kategoris]);
     }
 
     /**
