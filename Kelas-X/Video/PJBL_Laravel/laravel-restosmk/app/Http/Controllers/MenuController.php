@@ -35,7 +35,9 @@ class MenuController extends Controller
      */
     public function create()
     {
-        return view('backend.menu.insert');
+        $kategoris = Kategori::all();
+
+        return view('backend.menu.insert', ['kategoris' => $kategoris]);
     }
 
     /**
@@ -47,11 +49,25 @@ class MenuController extends Controller
     public function store(Request $request)
     {
         $data = $request->validate([
-            'gambar' => 'required | max:2045'
+            'gambar' => 'required | max:2045',
+            'menu' => 'required',
+            'deskripsi' => 'required',
+            'harga' => 'required',
         ]);
-        $namaGambar = $request->file('gambar')->getClientOriginalName();
+        $id = $request->idkategori;
 
+        $namaGambar = $request->file('gambar')->getClientOriginalName();
         $request->gambar->move(public_path('gambar'), $namaGambar);
+
+        Menu::create([
+            'idkategori' => $id,
+            'menu' => $data['menu'],
+            'deskripsi' => $data['deskripsi'],
+            'harga' => $data['harga'],
+            'gambar' => $namaGambar,
+        ]);
+
+        return redirect('admin/menu');
     }
 
     /**
