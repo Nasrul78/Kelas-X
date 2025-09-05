@@ -69,9 +69,11 @@ class KategoriController extends Controller
      * @param  \App\Models\Kategori  $kategori
      * @return \Illuminate\Http\Response
      */
-    public function edit(Kategori $kategori)
+    public function edit($idkategori)
     {
-        //
+        $kategori = Kategori::where('idkategori', $idkategori)->first();
+
+        return view('backend.kategori.update', ['kategori' => $kategori]);
     }
 
     /**
@@ -81,9 +83,17 @@ class KategoriController extends Controller
      * @param  \App\Models\Kategori  $kategori
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateKategoriRequest $request, Kategori $kategori)
+    public function update(Request $request, $idkategori)
     {
-        //
+        $data = $request->validate([
+            'kategori' => 'required',
+        ]);
+
+        Kategori::where('idkategori', $idkategori)->update([
+            'kategori' => $data['kategori'],
+        ]);
+
+        return redirect('admin/kategori');
     }
 
     /**

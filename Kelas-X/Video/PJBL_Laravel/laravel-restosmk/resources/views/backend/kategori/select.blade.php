@@ -26,7 +26,7 @@
                     <tr>
                         <td>{{ $no++ }}</td>
                         <td>{{ $kategori->kategori }}</td>
-                        <td>{{ $kategori->idkategori }}</td>
+                        <td><a href="{{ url('admin/kategori/'.$kategori->idkategori.'/edit') }}">Ubah</a></td>
                         <td><a href="{{ url('admin/kategori/'.$kategori->idkategori) }}">Hapus</a></td>
                     </tr>
                 @endforeach

@@ -2,12 +2,13 @@
 
 @section('admincontent')
     <div class="col-4">
-        <form action="{{ url('admin/kategori') }}" method="post">
+        <form action="{{ url('admin/kategori/'.$kategori->idkategori) }}" method="post">
             @csrf
+            @method('PUT')
 
             <div class="mt-2">
                 <label class="form-label" for="Email">Kategori</label>
-                <input class="form-control" value="{{ old('kategori') }}" type="text" name="kategori">
+                <input class="form-control" value="{{ $kategori->kategori }}" type="text" name="kategori">
                 <span class="text-danger">
                     @error('kategori'){{ $message }}@enderror
                 </span>
