@@ -76,9 +76,11 @@ class MenuController extends Controller
      * @param  \App\Models\Menu  $menu
      * @return \Illuminate\Http\Response
      */
-    public function show(Menu $menu)
+    public function show($idmenu)
     {
-        //
+        Menu::where('idmenu', '=', $idmenu)->delete();
+
+        return redirect('admin/menu');
     }
 
     /**
