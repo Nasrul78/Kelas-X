@@ -1,9 +1,13 @@
 <?php
 
-use App\Http\Controllers\AuthController;
+use App\Models\Order;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\FrontController;
+use App\Http\Controllers\OrderController;
+use App\Http\Controllers\KategoriController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,3 +45,9 @@ Route::get('checkout', [CartController::class, 'checkout']);
 
 Route::get('admin', [AuthController::class, 'index']);
 Route::post('admin/postlogin', [AuthController::class, 'postLogin']);
+
+Route::group(['prefix' => 'admin'], function () {
+    Route::resource('kategori', KategoriController::class);
+    Route::resource('user', UserController::class);
+    Route::resource('order', OrderController::class);
+});

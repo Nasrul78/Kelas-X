@@ -14,36 +14,36 @@
                 <div class="container-fluid">
                     <h2>Admin Page</h2>
                     <ul class="navbar-nav gap-5">
-                        <li class="nav-item"><a href="">{{ Auth::user()->email }}</a></li>
-                        <li class="nav-item"><a href="">Level: {{ Auth::user()->level }}</a></li>
-                        <li class="nav-item"><a href="admin/logout">Logout</a></li>
+                        <li class="nav-item">{{ Auth::user()->email }}</li>
+                        <li class="nav-item">Level: {{ Auth::user()->level }}</li>
+                        <li class="nav-item"><a href="{{ url('admin/logout') }}">Logout</a></li>
                     </ul>
                 </div>
             </nav>
         </div>
-        <div class="row">
+        <div class="row mt-4">
             <div class="col-2">
                 <ul class="list-group">
-                    @if (Auth::user()->level == 'admin')
+                    {{-- @if (Auth::user()->level == 'admin') --}}
                         <li class="list-group-item"><a href="">User</a></li>                   
-                    @endif
+                    {{-- @endif --}}
 
-                    @if (Auth::user()->level == 'kasir')
+                    {{-- @if (Auth::user()->level == 'kasir') --}}
                         <li class="list-group-item"><a href="">Order</a></li>                     
                         <li class="list-group-item"><a href="">Order Detail</a></li>                   
-                    @endif
+                    {{-- @endif --}}
 
-                    @if (Auth::user()->level == 'manager')
+                    {{-- @if (Auth::user()->level == 'manager') --}}
                         <li class="list-group-item"><a href="">Kategori</a></li>                     
                         <li class="list-group-item"><a href="">Menu</a></li>                     
                         <li class="list-group-item"><a href="">Pelanggan</a></li>                     
                         <li class="list-group-item"><a href="">Order</a></li>                     
                         <li class="list-group-item"><a href="">Order Detail</a></li>                   
-                    @endif
+                    {{-- @endif --}}
                 </ul>
             </div>
             <div class="col-10">
-
+                @yield('admincontent')
             </div>
         </div>
         <div class="bg-light mt-5">
