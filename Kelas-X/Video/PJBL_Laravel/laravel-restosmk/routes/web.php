@@ -4,6 +4,7 @@ use App\Models\Order;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\MenuController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\OrderController;
@@ -57,5 +58,6 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
     });
     Route::group(['middleware' => ['CekLogin:manager']], function () {
         Route::resource('kategori', KategoriController::class);
+        Route::resource('menu', MenuController::class);
     });
 });
