@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Kategori;
+use Illuminate\Http\Request;
 use App\Http\Requests\StoreKategoriRequest;
 use App\Http\Requests\UpdateKategoriRequest;
 
@@ -27,7 +28,7 @@ class KategoriController extends Controller
      */
     public function create()
     {
-        //
+        return view('backend.kategori.insert');
     }
 
     /**
@@ -36,9 +37,17 @@ class KategoriController extends Controller
      * @param  \App\Http\Requests\StoreKategoriRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreKategoriRequest $request)
+    public function store(Request $request)
     {
-        //
+        $data = $request->validate([
+            'kategori' => 'required',
+        ]);
+
+        Kategori::create([
+            'kategori' => $data['kategori'],
+        ]);
+
+        return redirect('admin/kategori');
     }
 
     /**

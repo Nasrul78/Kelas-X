@@ -5,7 +5,7 @@
         <h1>Kategori</h1>
     </div>
     <div>
-        <a href="#" class="btn btn-primary">Tambah Data</a>
+        <a href="{{ url('admin/kategori/create') }}" class="btn btn-primary">Tambah Data</a>
     </div>
     <div>
         <table class="table">

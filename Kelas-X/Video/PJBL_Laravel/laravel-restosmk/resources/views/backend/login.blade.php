@@ -36,7 +36,7 @@
                         </span>
                     </div>
                     <div class="mt-4">
-                        <button class="btn btn-primary" type="submit">login</button>
+                        <button class="btn btn-primary" type="submit">Login</button>
                     </div>
                 </form>
             </div>
