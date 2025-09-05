@@ -56,9 +56,11 @@ class KategoriController extends Controller
      * @param  \App\Models\Kategori  $kategori
      * @return \Illuminate\Http\Response
      */
-    public function show(Kategori $kategori)
+    public function show($idkategori)
     {
-        //
+        Kategori::where('idkategori', '=', $idkategori)->delete();
+
+        return redirect('admin/kategori');
     }
 
     /**
