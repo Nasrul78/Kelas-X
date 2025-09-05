@@ -89,9 +89,15 @@ class MenuController extends Controller
      * @param  \App\Models\Menu  $menu
      * @return \Illuminate\Http\Response
      */
-    public function edit(Menu $menu)
+    public function edit($idmenu)
     {
-        //
+        $kategoris = Kategori::all();
+        $menu = Menu::where('idmenu', $idmenu)->first();
+
+        return view('backend.menu.update', [
+            'kategoris' => $kategoris,
+            'menu' => $menu,
+        ]);
     }
 
     /**
@@ -101,9 +107,40 @@ class MenuController extends Controller
      * @param  \App\Models\Menu  $menu
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateMenuRequest $request, Menu $menu)
+    public function update(Request $request, $idmenu)
     {
-        //
+        if (isset($request->gambar)) {
+            $data = $request->validate([
+                'gambar' => 'required | max:2048',
+                'menu' => 'required',
+                'deskripsi' => 'required',
+                'harga' => 'required',
+            ]);
+
+            $namaGambar = $request->file('gambar')->getClientOriginalName();
+            $request->gambar->move(public_path('gambar'), $namaGambar);
+
+            Menu::where('idmenu', $idmenu)->update([
+                'menu' => $data['menu'],
+                'deskripsi' => $data['deskripsi'],
+                'harga' => $data['harga'],
+                'gambar' => $namaGambar,
+            ]);
+        } else {
+            $data = $request->validate([
+                'menu' => 'required',
+                'deskripsi' => 'required',
+                'harga' => 'required',
+            ]);
+
+            Menu::where('idmenu', $idmenu)->update([
+                'menu' => $data['menu'],
+                'deskripsi' => $data['deskripsi'],
+                'harga' => $data['harga'],
+            ]);
+        }
+
+        return redirect('admin/menu');
     }
 
     /**
