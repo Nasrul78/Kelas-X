@@ -45,8 +45,9 @@ Route::get('checkout', [CartController::class, 'checkout']);
 
 Route::get('admin', [AuthController::class, 'index']);
 Route::post('admin/postlogin', [AuthController::class, 'postLogin']);
+Route::get('admin/logout', [AuthController::class, 'logout']);
 
-Route::group(['prefix' => 'admin'], function () {
+Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
     Route::resource('kategori', KategoriController::class);
     Route::resource('user', UserController::class);
     Route::resource('order', OrderController::class);

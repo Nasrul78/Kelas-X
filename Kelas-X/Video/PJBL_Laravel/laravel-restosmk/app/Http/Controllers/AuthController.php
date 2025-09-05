@@ -9,6 +9,18 @@ class AuthController extends Controller
 {
     public function index()
     {
+        if ($user = Auth::user()) {
+            if ($user->level == 'admin') {
+                return redirect('admin/user');
+            }
+            if ($user->level == 'kasir') {
+                return redirect('admin/order');
+            }
+            if ($user->level == 'manager') {
+                return redirect('admin/kategori');
+            }
+        }
+
         return view('backend.login');
     }
 
@@ -22,9 +34,25 @@ class AuthController extends Controller
 
         if (Auth::attempt($data)) {
             $user = Auth::user();
-            echo $user->level;
-        } else {
-            echo 'lol';
+            if ($user->level == 'admin') {
+                return redirect('admin/user');
+            }
+            if ($user->level == 'kasir') {
+                return redirect('admin/order');
+            }
+            if ($user->level == 'manager') {
+                return redirect('admin/kategori');
+            }
         }
+
+        return redirect('admin');
+    }
+
+    public function logout()
+    {
+        session()->flush();
+        Auth::logout();
+
+        return redirect('admin');
     }
 }

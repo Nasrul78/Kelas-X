@@ -24,22 +24,22 @@
         <div class="row mt-4">
             <div class="col-2">
                 <ul class="list-group">
-                    {{-- @if (Auth::user()->level == 'admin') --}}
+                    @if (Auth::user()->level == 'admin')
                         <li class="list-group-item"><a href="">User</a></li>                   
-                    {{-- @endif --}}
+                    @endif
 
-                    {{-- @if (Auth::user()->level == 'kasir') --}}
+                    @if (Auth::user()->level == 'kasir')
                         <li class="list-group-item"><a href="">Order</a></li>                     
                         <li class="list-group-item"><a href="">Order Detail</a></li>                   
-                    {{-- @endif --}}
+                    @endif
 
-                    {{-- @if (Auth::user()->level == 'manager') --}}
+                    @if (Auth::user()->level == 'manager')
                         <li class="list-group-item"><a href="">Kategori</a></li>                     
                         <li class="list-group-item"><a href="">Menu</a></li>                     
                         <li class="list-group-item"><a href="">Pelanggan</a></li>                     
                         <li class="list-group-item"><a href="">Order</a></li>                     
                         <li class="list-group-item"><a href="">Order Detail</a></li>                   
-                    {{-- @endif --}}
+                    @endif
                 </ul>
             </div>
             <div class="col-10">
