@@ -5,7 +5,7 @@
         <h1>Data User</h1>
     </div>
     <div>
-        <a href="{{ url('admin/User/create') }}" class="btn btn-primary">Tambah Data</a>
+        <a href="{{ url('admin/user/create') }}" class="btn btn-primary">Tambah Data</a>
     </div>
     <div>
         <table class="table">
