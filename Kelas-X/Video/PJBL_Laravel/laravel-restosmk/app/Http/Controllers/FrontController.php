@@ -60,6 +60,7 @@ class FrontController extends Controller
             'jeniskelamin' => $data['jeniskelamin'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'aktif' => 1,
         ]);
 
         return redirect('/');
