@@ -33,7 +33,13 @@
                         <td>{{ $order->total }}</td>
                         <td>{{ $order->bayar }}</td>
                         <td>{{ $order->kembali }}</td>
-                        <td>{{ $order->status }}</td>
+                        @php
+                            $status = 'LUNAS';
+                            if ($order->status == 0) {
+                                $status = '<a href=" '.url('admin/order/'.$order->idorder).' ">BAYAR</a>';
+                            }
+                        @endphp
+                        <td>{!! $status !!}</td>
                     </tr>
                 @endforeach
             </tbody>
