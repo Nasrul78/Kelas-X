@@ -61,7 +61,16 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
+        $users = User::where('id', $id)->get();
+        $levels = User::where('level', $users[0]['level']);
+        $jumlah = $levels->count();
+
+        if ($jumlah == 1) {
+            session()->flash('pesan', 'Data hanya satu, tidak bisa dihapus!');
+        } else {
+            User::where('id', $id)->delete();
+        }
+        return redirect('admin/user');
     }
 
     /**

@@ -6,6 +6,9 @@
     </div>
     <div>
         <a href="{{ url('admin/user/create') }}" class="btn btn-primary">Tambah Data</a>
+        @if (session()->has('pesan'))
+            <p class="alert alert-danger">{{ session()->get('pesan') }}</p>
+        @endif
     </div>
     <div>
         <table class="table">
