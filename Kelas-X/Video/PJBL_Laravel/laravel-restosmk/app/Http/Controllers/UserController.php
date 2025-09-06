@@ -72,7 +72,9 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = User::where('id', $id)->first();
+
+        return view('backend.user.update', ['user' => $user]);
     }
 
     /**
@@ -84,7 +86,15 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = $request->validate([
+            'password' => 'required | min:3',
+        ]);
+
+        User::where('id', $id)->update([
+            'password' => bcrypt($data['password']),
+        ]);
+
+        return redirect('admin/user');
     }
 
     /**

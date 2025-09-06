@@ -30,8 +30,8 @@
                         <td>{{ $user->name }}</td>
                         <td>{{ $user->email }}</td>
                         <td>{{ $user->level }}</td>
-                        <td><a href="{{ url('admin/user/'.$user->iduser.'/edit') }}">Ubah</a></td>
-                        <td><a href="{{ url('admin/user/'.$user->iduser) }}">Hapus</a></td>
+                        <td><a href="{{ url('admin/user/'.$user->id.'/edit') }}">Ubah Password</a></td>
+                        <td><a href="{{ url('admin/user/'.$user->id) }}">Hapus</a></td>
                     </tr>
                 @endforeach
             </tbody>
