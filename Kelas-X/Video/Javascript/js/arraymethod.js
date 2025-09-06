@@ -12,11 +12,11 @@ let nama = ["budi", "joni", "tejo", "siti"];
 
 // nama.unshift("bobi", "roki");
 
-console.log(nama.slice(1, 7));
+// console.log(nama.slice(1, 7));
 
 let mapel = ["ipa", "bahasa", "matematika"];
 
-console.log(nama.concat(["ips", "pkn", "sejarah"]));
+// console.log(nama.concat(["ips", "pkn", "sejarah"]));
 
 // console.log(nama.splice(1, 7));
 
@@ -43,4 +43,22 @@ console.log(nama.concat(["ips", "pkn", "sejarah"]));
 
 // console.log(nilai);
 
-nilai.filter((a) => a.ipa > 80 && a.matematika > 80 ? console.log(a.nama) : null);
+// nilai.filter((a) => a.ipa > 80 && a.matematika > 80 ? console.log(a.nama) : null);
+
+// let siswa = nilai.map(function (a) {
+//     return a.nama;
+// });
+
+// let siswa = nilai.map((a) => [a.nama, a.ipa, a.bahasa]);
+// console.log(siswa);
+
+// mapel.sort();
+// console.log(mapel);
+
+// let hasil = nilai.reduce(function (a, b) {
+//     return (a = a + b.ipa);
+// }, 0);
+
+let hasil = nilai.reduce((a, b) => (a += b.bahasa), 0);
+
+console.log(hasil);
