@@ -15,7 +15,12 @@ class OrderController extends Controller
      */
     public function index()
     {
-        return view('backend.order.select');
+        $orders = Order::join('pelanggans', 'orders.idpelanggan', '=', 'pelanggans.idpelanggan')
+            ->select(['orders.*', 'pelanggans.*'])
+            ->orderBy('status', 'ASC')
+            ->paginate(3);
+
+        return view('backend.order.select', ['orders' => $orders]);
     }
 
     /**

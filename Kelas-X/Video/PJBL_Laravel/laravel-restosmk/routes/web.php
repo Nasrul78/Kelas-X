@@ -59,6 +59,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
     Route::group(['middleware' => ['CekLogin:manager']], function () {
         Route::resource('kategori', KategoriController::class);
         Route::resource('menu', MenuController::class);
+        Route::resource('order', OrderController::class);
         Route::get('select', [MenuController::class, 'select']);
         Route::post('postmenu/{id}', [MenuController::class, 'update']);
     });
