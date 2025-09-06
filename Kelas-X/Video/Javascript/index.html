@@ -5,13 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Belajar Javascript</title>
-    <script src="js/counter.js" async></script>
+    <script src="js/kalkulator.js" defer></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <input type="submit" value="Count Up" id="naik">
-    <h1>0</h1>
-    <input type="submit" value="Count Down" id="turun">
+    <div class="container">
+        <div class="panel">
+            <input type="number" id="tampil" value="0">
+        </div>
+        <div class="btn-angka">
+            <button>0</button>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+        </div>
+        <div class="btn-mat">
+            <button>Clear</button>
+            <button>+</button>
+            <button>-</button>
+            <button>*</button>
+            <button>/</button>
+        </div>
+    </div>
 </body>
 
 </html>
