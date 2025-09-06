@@ -28,7 +28,7 @@
                 @foreach ($orders as $order)
                     <tr>
                         <td>{{ $no++ }}</td>
-                        <td>{{ $order->pelanggan }}</td>
+                        <td><a href="{{ url('admin/order/'.$order->idorder.'/edit') }}">{{ $order->pelanggan }}</a></td>
                         <td>{{ $order->tglorder }}</td>
                         <td>{{ $order->total }}</td>
                         <td>{{ $order->bayar }}</td>

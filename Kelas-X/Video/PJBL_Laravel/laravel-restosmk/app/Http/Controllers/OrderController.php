@@ -64,9 +64,15 @@ class OrderController extends Controller
      * @param  \App\Models\Order  $order
      * @return \Illuminate\Http\Response
      */
-    public function edit(Order $order)
+    public function edit($idorder)
     {
-        //
+        $orders = Order::join('order_details', 'orders.idorder', '=', 'order_details.idorder')
+            ->join('menus', 'order_details.idmenu', '=', 'menus.idmenu')
+            ->join('pelanggans', 'orders.idpelanggan', '=', 'pelanggans.idpelanggan')
+            ->where('orders.idorder', $idorder)
+            ->get(['orders.*', 'order_details.*', 'menus.*', 'pelanggans.*']);
+
+        return view('backend.order.detail', ['orders' => $orders]);
     }
 
     /**
