@@ -47,20 +47,39 @@ let tampil = tblmenu.map((kolom) => {
   return `
   <div class="product-content">
     <div class="image"><img src="images/${kolom.gambar}" alt="" /></div>
+
     <div class="title">
       <h2>${kolom.menu}</h2>
     </div>
+
     <div class="deskripsi">
       <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit.
         Cupiditate, dignissimos.
       </p>
     </div>
+
     <div class="harga">
       <h2>${kolom.harga}</h2>
+    </div>
+
+    <div class="btn-beli">
+      <button data-idmenu="${kolom.idmenu}">Beli</button>
     </div>
   </div>`
 })
 
 const isi = document.querySelector(".product")
 isi.innerHTML = tampil
+
+let btnBeli = document.querySelectorAll(".btn-beli > button")
+
+let cart = []
+
+for (let i = 0; i < btnBeli.length; i++) {
+  btnBeli[i].onclick = () => {
+    // console.log(btnBeli[i].dataset["idmenu"])
+    cart.push(btnBeli[i].dataset["idmenu"])
+    console.log(cart)
+  }
+}
