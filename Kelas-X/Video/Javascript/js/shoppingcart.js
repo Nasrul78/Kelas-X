@@ -80,6 +80,12 @@ for (let i = 0; i < btnBeli.length; i++) {
   btnBeli[i].onclick = () => {
     // console.log(btnBeli[i].dataset["idmenu"])
     cart.push(btnBeli[i].dataset["idmenu"])
-    console.log(cart)
+
+    tblmenu.filter((a) => {
+      if (a.idmenu == btnBeli[i].dataset["idmenu"]) {
+        cart.push(a)
+        console.log(cart)
+      }
+    })
   }
 }
