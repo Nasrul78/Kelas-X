@@ -50,6 +50,7 @@
                   <th scope="col">Pelanggan</th>
                   <th scope="col">Alamat</th>
                   <th scope="col">Telp</th>
+                  <th scope="col">Hapus</th>
                 </tr>
               </thead>
               <tbody id="isiData"></tbody>
