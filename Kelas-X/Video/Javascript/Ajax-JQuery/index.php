@@ -19,23 +19,25 @@
           <div class="row">
             <h2>Input Data Pelanggan</h2>
           </div>
+          <div id="msg"></div>
           <form>
+            <input type="text" class="form-control" id="id" required aria-describedby="emailHelp">
             <div class="mb-3">
               <label for="pelanggan" class="form-label">Pelanggan</label>
-              <input type="text" class="form-control" id="pelanggan" aria-describedby="emailHelp">
+              <input type="text" class="form-control" id="pelanggan" required aria-describedby="emailHelp">
               <div id="emailHelp" class="form-text">Harus diisi!</div>
             </div>
             <div class="mb-3">
               <label for="alamat" class="form-label">Alamat</label>
-              <input type="text" class="form-control" id="alamat">
+              <input type="text" class="form-control" id="alamat" required>
               <div id="emailHelp" class="form-text">Harus diisi!</div>
             </div>
             <div class="mb-3">
               <label for="telp" class="form-label">Telp</label>
-              <input type="text" class="form-control" id="telp">
+              <input type="text" class="form-control" id="telp" required>
               <div id="emailHelp" class="form-text">Harus diisi!</div>
             </div>
-            <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" id="submit" class="btn btn-primary">Simpan</button>
           </form>
         </div>
         <div class="col-sm">
