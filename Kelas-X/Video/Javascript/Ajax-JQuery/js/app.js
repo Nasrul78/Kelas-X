@@ -132,8 +132,26 @@ $(document).ready(function () {
     selectData()
   }
 
-  function updateData(id) {
-    alert("update" + id)
+  function updateData() {
+    let dataPelanggan = {
+      idpelanggan: id,
+      pelanggan: pelanggan,
+      al: alamat,
+      telp: telp,
+    }
+
+    $.ajax({
+      type: "post",
+      url: "php/update.php",
+      cache: false,
+      data: JSON.stringify(dataPelanggan),
+      success: function (response) {
+        let out = `<p>${response}</p>`
+        $("#msg").html(out)
+      },
+    })
+
+    selectData()
   }
 
   selectData()
