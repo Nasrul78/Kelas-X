@@ -14,32 +14,20 @@
       <div class="row">
         <h1>Belajar Ajax-JQuery Bootstrap PHP</h1>
       </div>
+      <div class="row">
+        <div class="col-4">
+          <button type="button" class="btn btn-primary" id="btn-tambah" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Tambah Pelanggan
+          </button>
+        </div>
+      </div>
       <div class="mt-4 row">
-        <div class="col-sm">
+        <!-- <div class="col-sm">
           <div class="row">
             <h2>Input Data Pelanggan</h2>
           </div>
           <div id="msg"></div>
-          <form>
-            <input type="text" class="form-control" id="id" required hidden aria-describedby="emailHelp">
-            <div class="mb-3">
-              <label for="pelanggan" class="form-label">Pelanggan</label>
-              <input type="text" class="form-control" id="pelanggan" required aria-describedby="emailHelp">
-              <div id="emailHelp" class="form-text">Harus diisi!</div>
-            </div>
-            <div class="mb-3">
-              <label for="alamat" class="form-label">Alamat</label>
-              <input type="text" class="form-control" id="alamat" required>
-              <div id="emailHelp" class="form-text">Harus diisi!</div>
-            </div>
-            <div class="mb-3">
-              <label for="telp" class="form-label">Telp</label>
-              <input type="text" class="form-control" id="telp" required>
-              <div id="emailHelp" class="form-text">Harus diisi!</div>
-            </div>
-            <button type="submit" id="submit" class="btn btn-primary">Simpan</button>
-          </form>
-        </div>
+        </div> -->
         <div class="col-sm">
           <div class="row"><h2>Data Pelaggan</h2></div>
           <div class="row">
@@ -56,6 +44,38 @@
               </thead>
               <tbody id="isiData"></tbody>
             </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="titel">Tambah Data</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <input type="text" class="form-control" id="id" required hidden aria-describedby="emailHelp">
+                <div class="mb-3">
+                  <label for="pelanggan" class="form-label">Pelanggan</label>
+                  <input type="text" class="form-control" id="pelanggan" required aria-describedby="emailHelp">
+                  <div id="emailHelp" class="form-text">Harus diisi!</div>
+                </div>
+                <div class="mb-3">
+                  <label for="alamat" class="form-label">Alamat</label>
+                  <input type="text" class="form-control" id="alamat" required>
+                  <div id="emailHelp" class="form-text">Harus diisi!</div>
+                </div>
+                <div class="mb-3">
+                  <label for="telp" class="form-label">Telp</label>
+                  <input type="text" class="form-control" id="telp" required>
+                  <div id="emailHelp" class="form-text">Harus diisi!</div>
+                </div>
+                <button type="submit" id="submit" data-bs-dismiss="modal" class="btn btn-primary">Simpan</button>
+              </form>
+            </div>
           </div>
         </div>
       </div>

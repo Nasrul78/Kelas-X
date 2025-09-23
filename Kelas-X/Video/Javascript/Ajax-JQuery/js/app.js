@@ -20,13 +20,25 @@ $(document).ready(function () {
     $("#telp").val("")
   })
 
+  $("#btn-tambah").click(function (e) {
+    e.preventDefault()
+
+    $("#titel").html("<p>Tambah Data</p>")
+
+    $("#id").val("")
+    $("#pelanggan").val("")
+    $("#alamat").val("")
+    $("#telp").val("")
+  })
+
   $("tbody").on("click", ".btn-del", function () {
     let id = $(this).attr("data-id")
-    deleteData(id)
+    if (confirm("Yakin akan menghapus?")) deleteData(id)
   })
 
   $("tbody").on("click", ".btn-ubah", function () {
     let id = $(this).attr("data-id")
+    $("#titel").html("<p>Ubah Data</p>")
     selectUpdate(id)
   })
 
@@ -81,7 +93,8 @@ $(document).ready(function () {
                 <button
                   type="button"
                   class="btn btn-warning btn-ubah"
-                  data-id=${val.idpelanggan}>
+                  data-id=${val.idpelanggan}
+                  data-bs-toggle="modal" data-bs-target="#exampleModal">
                   UBAH
                 </button>
               </td>
