@@ -25,6 +25,34 @@ $(document).ready(function () {
     deleteData(id)
   })
 
+  $("tbody").on("click", ".btn-ubah", function () {
+    let id = $(this).attr("data-id")
+    selectUpdate(id)
+  })
+
+  function selectUpdate(id) {
+    let idpelanggan = {
+      idpelanggan: id,
+    }
+
+    $.ajax({
+      type: "post",
+      url: "php/selectUpdate.php",
+      cache: false,
+      data: JSON.stringify(idpelanggan),
+      success: function (response) {
+        let data = JSON.parse(response)
+
+        $("#id").val(data.idpelanggan)
+        $("#pelanggan").val(data.pelanggan)
+        $("#alamat").val(data.alamat)
+        $("#telp").val(data.telp)
+      },
+    })
+
+    selectData()
+  }
+
   function selectData() {
     $.ajax({
       type: "get",
@@ -47,6 +75,14 @@ $(document).ready(function () {
                   class="btn btn-danger btn-del"
                   data-id=${val.idpelanggan}>
                   DEL
+                </button>
+              </td>
+              <td>
+                <button
+                  type="button"
+                  class="btn btn-warning btn-ubah"
+                  data-id=${val.idpelanggan}>
+                  UBAH
                 </button>
               </td>
             </tr>`
@@ -96,8 +132,8 @@ $(document).ready(function () {
     selectData()
   }
 
-  function updateData() {
-    alert("update")
+  function updateData(id) {
+    alert("update" + id)
   }
 
   selectData()

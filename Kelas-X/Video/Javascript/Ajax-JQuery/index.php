@@ -21,7 +21,7 @@
           </div>
           <div id="msg"></div>
           <form>
-            <input type="text" class="form-control" id="id" required aria-describedby="emailHelp">
+            <input type="text" class="form-control" id="id" required hidden aria-describedby="emailHelp">
             <div class="mb-3">
               <label for="pelanggan" class="form-label">Pelanggan</label>
               <input type="text" class="form-control" id="pelanggan" required aria-describedby="emailHelp">
@@ -51,6 +51,7 @@
                   <th scope="col">Alamat</th>
                   <th scope="col">Telp</th>
                   <th scope="col">Hapus</th>
+                  <th scope="col">Ubah</th>
                 </tr>
               </thead>
               <tbody id="isiData"></tbody>
