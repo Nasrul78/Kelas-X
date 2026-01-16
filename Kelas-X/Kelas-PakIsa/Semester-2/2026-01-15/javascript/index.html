@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar JavaScript</title>
+  </head>
+  <body>
+    <h1 id="judul"></h1>
+    <p id="isi"></p>
+
+    <input type="number" id="bil1" />
+    <input type="number" id="bil2" />
+    <button onclick="{hitung()}">Hitung</button>
+
+    <h1 id="zodiakanda">Zodiak Anda</h1>
+    <input type="number" id="bulan" placeholder="Bulan" />
+    <input type="number" id="tanggal" placeholder="Tanggal" />
+    <button onclick="{zodiak()}">Zodiak</button>
+
+    <h1 id="nilaianda">Nilai Anda</h1>
+    <input type="number" id="nilai" placeholder="Nilai" />
+    <button onclick="{nilai()}">Nilai</button>
+
+    <script>
+      function hitung() {
+        let hasil = document.getElementById("judul")
+        let bil1 = document.getElementById("bil1").value
+        let bil2 = document.getElementById("bil2").value
+
+        hasil.innerHTML = parseInt(bil1) + parseInt(bil2)
+      }
+
+      function zodiak() {
+        let zodiakAnda = document.getElementById("zodiakanda")
+        let bulan = parseInt(document.getElementById("bulan").value)
+        let tanggal = parseInt(document.getElementById("tanggal").value)
+
+        if (bulan < 1 || bulan > 12) {
+          alert("Bulan yang anda masukkan invalidddddddddd!")
+        } else {
+          if (tanggal < 1 || tanggal > 31) {
+            alert("Tanggal yang anda masukkan invalidddddddddd!")
+          } else {
+            if (bulan === 1) {
+              if (tanggal > 1 && tanggal < 20)
+                zodiakAnda.innerHTML = "Capricorn"
+              else zodiakAnda.innerHTML = "Aquarius"
+            }
+
+            if (bulan === 2) {
+              if (tanggal > 1 && tanggal < 19) zodiakAnda.innerHTML = "Aquarius"
+              else zodiakAnda.innerHTML = "Pisces"
+            }
+
+            if (bulan === 3) {
+              if (tanggal > 1 && tanggal < 21) zodiakAnda.innerHTML = "Pisces"
+              else zodiakAnda.innerHTML = "Aries"
+            }
+
+            if (bulan === 4) {
+              if (tanggal > 1 && tanggal < 20) zodiakAnda.innerHTML = "Aries"
+              else zodiakAnda.innerHTML = "Taurus"
+            }
+
+            if (bulan === 5) {
+              if (tanggal > 1 && tanggal < 21) zodiakAnda.innerHTML = "Taurus"
+              else zodiakAnda.innerHTML = "Gemini"
+            }
+
+            if (bulan === 6) {
+              if (tanggal > 1 && tanggal < 21) zodiakAnda.innerHTML = "Gemini"
+              else zodiakAnda.innerHTML = "Cancer"
+            }
+
+            if (bulan === 7) {
+              if (tanggal > 1 && tanggal < 23) zodiakAnda.innerHTML = "Cancer"
+              else zodiakAnda.innerHTML = "Leo"
+            }
+
+            if (bulan === 8) {
+              if (tanggal > 1 && tanggal < 23) zodiakAnda.innerText = "Leo"
+              else zodiakAnda.innerHTML = "Virgo"
+            }
+
+            if (bulan === 9) {
+              if (tanggal > 1 && tanggal < 23) zodiakAnda.innerHTML = "Virgo"
+              else zodiakAnda.innerHTML = "Libra"
+            }
+
+            if (bulan === 10) {
+              if (tanggal > 1 && tanggal < 23) zodiakAnda.innerHTML = "Libra"
+              else zodiakAnda.innerHTML = "Scorpio"
+            }
+
+            if (bulan === 11) {
+              if (tanggal > 1 && tanggal < 22) zodiakAnda.innerHTML = "Scorpio"
+              else zodiakAnda.innerHTML = "Sagitarius"
+            }
+
+            if (bulan === 12) {
+              if (tanggal > 1 && tanggal < 22)
+                zodiakAnda.innerHTML = "Sagitarius"
+              else zodiakAnda.innerHTML = "Capricorn"
+            }
+          }
+        }
+      }
+
+      function nilai() {
+        let nilaiAnda = document.getElementById("nilaianda")
+        let nilai = document.getElementById("nilai").value
+
+        if (nilai < 0 || nilai > 100) {
+          alert("Nilai invalidddddddddd")
+        } else {
+          if (nilai >= 90 && nilai <= 100) nilaiAnda.innerHTML = "Nilai Anda: A"
+          if (nilai >= 70 && nilai <= 89) nilaiAnda.innerHTML = "Nilai Anda: B"
+          if (nilai >= 60 && nilai <= 69) nilaiAnda.innerHTML = "Nilai Anda: C"
+          if (nilai >= 50 && nilai <= 59) nilaiAnda.innerHTML = "Nilai Anda: D"
+          if (nilai <= 50) nilaiAnda.innerHTML = "Nilai Anda: E"
+        }
+      }
+    </script>
+  </body>
+</html>
