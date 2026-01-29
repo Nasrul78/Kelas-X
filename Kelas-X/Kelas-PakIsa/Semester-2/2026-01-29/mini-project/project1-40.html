@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Project 1-40</title>
+  </head>
+  <body>
+    <h1>Mini Project 1-40</h1>
+
+    <input type="number" id="a" />
+    <input type="number" id="b" />
+
+    <button onclick="run()">Proses</button>
+
+    <p id="hasil"></p>
+
+    <script>
+      function run() {
+        let a = document.getElementById("a").value;
+        let b = document.getElementById("b").value;
+        document.getElementById("hasil").innerHTML = a + b;
+      }
+    </script>
+  </body>
+</html>
