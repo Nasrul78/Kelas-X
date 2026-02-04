@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mini Project 3</title>
+  </head>
+  <body>
+    <h3>Mobil</h3>
+
+    <button onclick="buat()">Mobil</button>
+
+    <p id="hasil"></p>
+
+    <script>
+      let hasil = document.getElementById("hasil")
+
+      function Mobil(merk, warna) {
+        this.merk = merk
+        this.warna = warna
+      }
+
+      function buat() {
+        let m = new Mobil("Mclaren", "Hijau")
+        hasil.innerHTML = m.merk + " " + m.warna
+      }
+    </script>
+  </body>
+</html>

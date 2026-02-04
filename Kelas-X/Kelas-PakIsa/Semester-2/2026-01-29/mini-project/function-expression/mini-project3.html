@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Project 3</title>
+  </head>
+  <body>
+    <h3>Konversi Rupiah ke Dollar</h3>
+
+    <input id="rupiah" />
+    <button onclick="konversi()">Dollar</button>
+
+    <p id="hasil"></p>
+
+    <script>
+      let rupiah = document.getElementById("rupiah")
+      let hasil = document.getElementById("hasil")
+
+      const konversi = function () {
+        hasil.innerHTML = rupiah.value / 16.788 + " $"
+      }
+    </script>
+  </body>
+</html>

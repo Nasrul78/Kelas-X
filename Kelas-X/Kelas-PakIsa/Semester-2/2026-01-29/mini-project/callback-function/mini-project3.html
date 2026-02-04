@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Project 3</title>
+  </head>
+  <body>
+    <h3>Validasi</h3>
+
+    <input id="n" />
+    <button onclick="cek()">Validasi</button>
+
+    <p id="hasil"></p>
+
+    <script>
+      let n = document.getElementById("n")
+      let hasil = document.getElementById("hasil")
+
+      function validasi(x, cb) {
+        if (x > 0) cb("Valid")
+        else cb("Tidak Valid")
+      }
+
+      function cek() {
+        validasi(n.value, function (msg) {
+          hasil.innerHTML = msg
+        })
+      }
+    </script>
+  </body>
+</html>

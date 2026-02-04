@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Project 2</title>
+  </head>
+  <body>
+    <h3>Hitung Pajak</h3>
+
+    <input id="harga" />
+    <button onclick="pajak()">Pajak</button>
+
+    <p id="hasil"></p>
+
+    <script>
+      let harga = document.getElementById("harga")
+      let hasil = document.getElementById("hasil")
+
+      const pajak = () => (hasil.innerHTML = harga.value * 0.1)
+    </script>
+  </body>
+</html>

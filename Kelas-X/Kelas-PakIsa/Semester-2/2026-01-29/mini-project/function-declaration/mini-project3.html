@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Project 3</title>
+  </head>
+  <body>
+    <h3>Konversi Suhu</h3>
+
+    <input id="c" />
+    <button onclick="konversi()">Konversi</button>
+
+    <p id="hasil"></p>
+
+    <script>
+      function konversi() {
+        let c = Number(document.getElementById("c").value)
+
+        let f = (c * 9) / 5 + 32
+        document.getElementById("hasil").innerHTML = f
+      }
+    </script>
+  </body>
+</html>

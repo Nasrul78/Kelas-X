@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Project 2</title>
+  </head>
+  <body>
+    <h3>Luas Persegi Panjang</h3>
+
+    <input id="p" /><input id="l" />
+    <button onclick="luas()">Luas</button>
+
+    <p id="hasil"></p>
+
+    <script>
+      let p = document.getElementById("p")
+      let l = document.getElementById("l")
+      let hasil = document.getElementById("hasil")
+
+      const luas = function () {
+        hasil.innerHTML = p.value * l.value
+      }
+    </script>
+  </body>
+</html>

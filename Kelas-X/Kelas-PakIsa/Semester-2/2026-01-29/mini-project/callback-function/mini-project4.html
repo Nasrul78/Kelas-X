@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Project 4</title>
+  </head>
+  <body>
+    <h3>Nilai</h3>
+
+    <input id="n" />
+    <button onclick="cek()">Cek</button>
+
+    <p id="hasil"></p>
+
+    <script>
+      let n = document.getElementById("n")
+      let hasil = document.getElementById("hasil")
+
+      function nilai(x, cb) {
+        cb(x >= 75 ? "Lulus" : "Tidak Lulus")
+      }
+      nilai(80, function (r) {
+        console.log(r)
+      })
+    </script>
+  </body>
+</html>

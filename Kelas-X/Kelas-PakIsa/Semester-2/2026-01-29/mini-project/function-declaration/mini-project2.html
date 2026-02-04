@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Project 2</title>
+  </head>
+  <body>
+    <h3>Cek Kelulusan</h3>
+
+    <input id="nilai" />
+    <button onclick="cek()">Cek</button>
+
+    <p id="hasil"></p>
+
+    <script>
+      function cek() {
+        let nilai = Number(document.getElementById("nilai").value)
+        let hasil = document.getElementById("hasil")
+
+        hasil.innerHTML = nilai >= 75 ? "Lulus" : "Tidak Lulus"
+      }
+    </script>
+  </body>
+</html>

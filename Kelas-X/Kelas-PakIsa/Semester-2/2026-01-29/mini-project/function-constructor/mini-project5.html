@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Project 5</title>
+  </head>
+  <body>
+    <h3>Buat Buku</h3>
+
+    <button onclick="buat()">Buku</button>
+
+    <p id="hasil"></p>
+
+    <script>
+      let hasil = document.getElementById("hasil")
+
+      function Buku(judul, penulis) {
+        this.judul = judul
+        this.penulis = penulis
+      }
+
+      function buat() {
+        let b = new Buku("The 48 Laws of Power", "Robert Greene")
+        hasil.innerHTML = "Judul : " + b.judul + "\nPenulis : " + b.penulis
+      }
+    </script>
+  </body>
+</html>

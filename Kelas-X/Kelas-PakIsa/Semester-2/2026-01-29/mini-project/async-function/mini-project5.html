@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Project 5</title>
+  </head>
+  <body>
+    <h3>Proses</h3>
+
+    <button onclick="proses()">Proses</button>
+
+    <p id="hasil"></p>
+
+    <script>
+      async function proses() {
+        hasil.innerHTML = "Step 1"
+        await new Promise((r) => setTImeout(r, 1000))
+        hasil.innerHTML = "Step 2"
+      }
+    </script>
+  </body>
+</html>

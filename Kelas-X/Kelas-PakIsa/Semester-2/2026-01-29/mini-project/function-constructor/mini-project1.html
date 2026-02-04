@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Project 1</title>
+  </head>
+  <body>
+    <h3>Buat Siswa</h3>
+
+    <button onclick="buat()">Buat Siswa</button>
+
+    <p id="hasil"></p>
+
+    <script>
+      let hasil = document.getElementById("hasil")
+
+      function Siswa(nama, kelas) {
+        this.nama = nama
+        this.kelas = kelas
+      }
+
+      function buat() {
+        let s = new Siswa("Nasrul", "X-RPL")
+        hasil.innerHTML = s.nama + " - " + s.kelas
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Project 1</title>
+  </head>
+  <body>
+    <h3>Hitung Klik</h3>
+
+    <button id="hasil">Klik</button>
+
+    <p id="hasil"></p>
+
+    <script>
+      let c = 0
+      let hasil = document.getElementById("hasil")
+
+      hasil.onclick = function () {
+        c++
+        hasil.innerHTML = c
+      }
+    </script>
+  </body>
+</html>

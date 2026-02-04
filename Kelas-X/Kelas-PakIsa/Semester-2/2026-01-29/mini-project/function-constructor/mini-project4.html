@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Project 4</title>
+  </head>
+  <body>
+    <h3>Buat User</h3>
+
+    <button onclick="buat()">User</button>
+
+    <p id="hasil"></p>
+
+    <script>
+      let hasil = document.getElementById("hasil")
+
+      function User(username, password) {
+        this.username = username
+        this.password = password
+      }
+
+      function buat() {
+        let user = new User("admin", "123")
+        hasil.innerHTML =
+          "Username :  " + user.username + "\nPassword : " + user.password
+      }
+    </script>
+  </body>
+</html>

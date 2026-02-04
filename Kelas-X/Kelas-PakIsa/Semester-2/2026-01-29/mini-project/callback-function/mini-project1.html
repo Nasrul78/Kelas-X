@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Project 1</title>
+  </head>
+  <body>
+    <h3>Hitung Tambah</h3>
+
+    <input id="a" />
+    <input id="b" />
+    <button onclick="hitung()">Tambah</button>
+
+    <p id="hasil"></p>
+
+    <script>
+      let a = document.getElementById("a")
+      let b = document.getElementById("b")
+      let hasil = document.getElementById("hasil")
+
+      function proses(x, y, cb) {
+        cb(x, y)
+      }
+
+      function hitung() {
+        proses(Number(a.value), Number(b.value), function (x, y) {
+          hasil.innerHTML = x + y
+        })
+      }
+    </script>
+  </body>
+</html>

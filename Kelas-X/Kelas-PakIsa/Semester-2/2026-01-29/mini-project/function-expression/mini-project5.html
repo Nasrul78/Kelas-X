@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Project 5</title>
+  </head>
+  <body>
+    <h3>Cek Nilai</h3>
+
+    <input id="nilai" />
+    <button onclick="grade()">Grade</button>
+
+    <p id="hasil"></p>
+
+    <script>
+      let nilai = document.getElementById("nilai")
+      let hasil = document.getElementById("hasil")
+
+      const grade = function () {
+        let n = nilai.value
+
+        if (n >= 85) hasil.innerHTML = "A"
+        else if (n >= 75) hasil.innerHTML = "B"
+        else hasil.innerHTML = "C"
+      }
+    </script>
+  </body>
+</html>
