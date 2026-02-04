@@ -29,6 +29,7 @@ public class Main {
     System.out.println("Absen yang di input: " + absen);
     System.out.println("Apakah anda sudah dewasa? " + isDewasa);
     System.out.println("Tinggi anda: " + tinggi);
+    System.out.println("Jenis kelamin anda: " + jenisKelamin);
 
     inputUser.close();
   }
