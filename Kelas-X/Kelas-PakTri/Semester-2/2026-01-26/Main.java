@@ -16,13 +16,6 @@ public class Main {
       System.out.println("Tidak Lulus");
     }
 
-    // Zodiak
-    System.out.print("Masukkan tanggal lahir: ");
-    int tanggal = InputUser.nextInt();
-    System.out.print("Masukkan bulan lahir: ");
-    int bulan = InputUser.nextInt();
-    System.out.print("Masukkan tahun lahir: ");
-
-    System.out.println("Zodiak: " + zodiak(tanggal, bulan, tahun));
+    InputUser.close();
   }
 }
