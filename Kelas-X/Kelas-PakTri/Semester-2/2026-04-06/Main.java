@@ -31,7 +31,7 @@ public class Main {
         System.out.println("2, 3, 4 = " + perkalian(2, 3, 4));
 
         // 2.5 * 4.0 = 10.0
-        System.out.println("2.5, 4.0 = " + perkalian(2.5, 4.0));
+        System.out.println("2.5f, 4.0f = " + perkalian(2.5f, 4.0f));
 
         // 2 * 3 * 4 = 24
         int[] arr = { 2, 3, 4 };
